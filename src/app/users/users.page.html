@@ -1,0 +1,10 @@
+<ion-list *ngIf="show">
+  <ion-item *ngFor="let user of users" class="list-group-item d-flex justify-content-between align-items-center">
+    <ion-label>{{ user.id }}, {{ user.name }}</ion-label>
+    <ion-badge color="primary" mode="ios">{{ user.email }}</ion-badge>
+  </ion-item>
+</ion-list>
+
+<ion-button (click)="show=!show" expand="default" style="width: 20%;">
+  {{ show ? 'hide' : 'show'}}
+</ion-button>
